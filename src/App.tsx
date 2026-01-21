@@ -13,6 +13,9 @@ import Profile from './components/Profile';
 import MasterAdmin from './components/MasterAdmin';
 
 const App: React.FC = () => {
+
+
+const App: React.FC = () => {
   const [currentUser, setCurrentUser] = useState<User | null>(null);
   const [state, setState] = useState<AppState>(INITIAL_STATE);
   const [loading, setLoading] = useState(true);
