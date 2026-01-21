@@ -26,8 +26,8 @@ export const MONTHS = [
 
 /**
  * Retorna a data atual no formato YYYY-MM-DD respeitando o fuso horário local.
- * Utiliza o locale 'en-CA' (Canadá) que por padrão retorna o formato ISO-like YYYY-MM-DD.
- * Isso elimina o bug da "data de amanhã" que o .toISOString() causa no Brasil após as 21h.
+ * O locale 'en-CA' é usado por padronizar o formato ISO (YYYY-MM-DD).
+ * Resolve o bug de "data de amanhã" comum em deploys Cloudflare/Edge.
  */
 export const getLocalDate = () => {
   return new Date().toLocaleDateString('en-CA');
