@@ -1,23 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const root = document.getElementById("root");
-
-if (!root) {
-  throw new Error("Root element not found");
+function App() {
+  return (
+    <h1 style={{ textAlign: "center", marginTop: 100 }}>
+      🚀 Rumont Funcionando 🚀
+    </h1>
+  );
 }
 
-ReactDOM.createRoot(root).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <div style={{
-      minHeight: "100vh",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      fontSize: "32px",
-      fontWeight: "bold"
-    }}>
-      🔥 RUMONT REACT ESTÁ VIVO 🔥
-    </div>
+    <App />
   </React.StrictMode>
 );
